@@ -1,0 +1,151 @@
+/* Общие стили */
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #4caf50;
+}
+
+nav a {
+    color: #4caf50;
+    margin: 0 1rem;
+    text-decoration: none;
+    
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #4caf50;
+    margin-top: 0;
+}
+
+/* Страница информации */
+.info ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+/* Страница списка дел и таймера */
+.todo-input {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+#new-task {
+    flex: 1;
+    padding: 0.5rem;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border: 1px solid #4caf50;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#task-list li {
+    background-color: #2e2e2e;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#task-list li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.settings {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.settings label {
+    color: #ffffff;
+}
+
+.settings input {
+    padding: 0.5rem;
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border: 1px solid #4caf50;
+    border-radius: 4px;
+    width: 80px;
+}
+
+.timer-display {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#timer {
+    font-size: 3rem;
+    color: #4caf50;
+    margin-bottom: 1rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.session-info {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.session-info p {
+    margin: 0.5rem 0;
+}
