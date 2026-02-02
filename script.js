@@ -13,7 +13,7 @@ if (savedTasks) {
 }
 
 addTaskButton.addEventListener('click', addTask);
-newTaskInput.addEventListener('keypress', function(e) {
+newTaskInput.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         addTask();
     }
@@ -21,11 +21,11 @@ newTaskInput.addEventListener('keypress', function(e) {
 
 
 function loadTask() {
-    tasks = JSON.parse(savedTasks)
+    if (!tasks || tasks.length === 0) return;
 
     tasks.forEach((task) => {
-            createTaskElement(task.text);
-        });
+        createTaskElement(task.text);
+    });
 }
 
 function createTaskElement(taskText) {
@@ -37,30 +37,30 @@ function createTaskElement(taskText) {
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Удалить';
-    deleteButton.addEventListener('click', function() {
+    deleteButton.addEventListener('click', function () {
         taskList.removeChild(li);
         tasks = tasks.filter(t => t.text !== taskText);
         saveTasksToLocalStorage();
     });
 
-    li.addEventListener('click', function() {
+    li.addEventListener('click', function () {
         li.classList.toggle('completed');
     });
 
     li.appendChild(deleteButton);
     taskList.appendChild(li);
-    };
+};
 
-    
+
 
 function addTask() {
     const taskText = newTaskInput.value.trim();
 
     createTaskElement(taskText)
     newTaskInput.value = '';
-    
-    tasks.push({ text: taskText}); 
-    
+
+    tasks.push({ text: taskText });
+
     saveTasksToLocalStorage();
 }
 
