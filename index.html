@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>djksusha</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+    </style>
+
+</head>
+
+<!--TODO: нормальное разрешение изображения на фоне, а то это говно слишком огромное-->
+
+<body>
+    <div id="start-screen">
+        <h1>SAVE DAVUHA</h1>
+        <p>🎧Желательно включить звук, но без него ничего сильно не теряется.</p>
+        <button onclick="startGame()">Начать❤️‍🩹</button>
+    </div>
+    <div id="game" style="display: none;">
+        <img src="img/bg-ispanskie.png" id="bg">
+        <div id="ui-layer">
+            <div id="text-box">Тут будет текст...</div>
+            <div id="choices-box">
+                <!-- Кнопки будут появляться тут сами через JS -->
+            </div>
+        </div>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="audio/romantic.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+<script src="script.js"></script>
+
+</html>
